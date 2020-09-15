@@ -3,12 +3,9 @@
 // ===============================
 
 const nav = document.querySelector('.nav');
-const recentProjects = document.getElementById('recent-projects');
 const projectsH1 = document.querySelector('.projects-h1');
 const resume = document.getElementById('resume');
-const aboutInfo = document.getElementById('about-info');
 const showProject = document.getElementById('show-project');
-const projectBtns = document.querySelector('.project-btns');
 let index;
 
 
@@ -92,14 +89,14 @@ const projects = [
         link: "../projects/project-5/index.html",
         files: "https://github.com/brandonh3/techdegree-project-6"
     }
-]
+];
 
 // ===============================
 //     Validate Email Address
 // ===============================
 
 function emailIsValid(email) {
-    return /\S+@\S+\.\S+/.test(email)
+    return /\S+@\S+\.\S+/.test(email);
 }
 
 
@@ -185,7 +182,7 @@ if (submitBtn) {
             }
         }
     });
-};
+}
 
 if (clearBtn) {
     clearBtn.addEventListener('click', () => {
@@ -200,15 +197,40 @@ if (clearBtn) {
         chat.innerText = "let's chat.";
         submitBtn.disabled = false;
     });
-};
+}
 
+// ===============================
+//       Site Navigation
+// ===============================
 
-if (projectsH1) {
-    index = 0;
+nav.addEventListener('click', (event) => {
+    if (event.target.id !== '' && event.target.id !== 'resume') {
+        if (event.target.id === 'say-hello') {
+            window.location.href='contact.html';
+        } else if (event.target.id === 'about-me') {
+            window.location.href = 'about.html';
+        } else if (event.target.id === 'recent-projects') {
+            window.location.href = 'projects.html';
+        } else if (event.target.id === 'home') {
+            window.location.href = 'index.html';
+        }
+    }
+});
+
+// ===============================
+//     Display First Project
+// ===============================
+
+if (projectsH1) { // checks h1 element for match to projects page h1
+    index = 0; // if matched, set index to 0 and display the first project
     displayProject(index);
 }
 
-if(showProject) {
+// ===============================
+//       Project List Nav
+// ===============================
+
+if (showProject) {
     showProject.addEventListener('click', (event) => {
         if (event.target.id === 'left' || event.target.id === 'back') {
             if (index !== 0) {
@@ -228,7 +250,11 @@ if(showProject) {
             }
         }
     });
-};
+}
+
+// ===============================
+//  Opens resume.pdf in a new tab
+// ===============================
 
 resume.addEventListener('click', () => {
     window.open('../images/resume.pdf');
