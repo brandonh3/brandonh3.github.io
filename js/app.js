@@ -2,10 +2,13 @@
 //        Global Variables
 // ===============================
 
-const nav = document.querySelector('.nav');
-const projectsH1 = document.querySelector('.projects-h1');
+
 const resume = document.getElementById('resume');
-const showProject = document.getElementById('show-project');
+const projectSection = document.getElementById('projects');
+const projectCards = document.querySelector('.project-cards');
+const navItem = document.querySelector('.navbar-end');
+const navMenu = document.querySelector('.navbar-menu');
+const burgerMenu = document.querySelector('.navbar-burger');
 let index;
 
 
@@ -43,7 +46,7 @@ const projects = [
     {
         title: "Employee Directory",
         img: "./images/project-2.png",
-        about: "An interactive employee directory that pulls  employee images & information using a random user API. Clicking a user's image displays a modal with even more information on that employee. Navigation arrows allow scrolling endlessly through all employees within the directory. A search function allows filering of employees based on their name.",
+        about: "An interactive employee directory that generates employee profiles using a random user API.",
         skills: [
             html5,
             css3,
@@ -56,7 +59,7 @@ const projects = [
     {
         title: "Photo Gallery",
         img: "./images/project-3.png",
-        about: "An interactive photo gallery of various landscapes. Clicking an image displays a modal with the ability to scroll through all images within the gallery. A search function allows filering of images based on keywords. A persistent toggle allows for switching between light & dark modes.",
+        about: "An interactive photo gallery with features including a lightbox view and light & dark themes using a persistent toggle.",
         skills: [
             html5,
             css3,
@@ -80,7 +83,7 @@ const projects = [
     {
         title: "Wheel of Success Game",
         img: "./images/project-5.png",
-        about: "An interactive phrase-guessing game where the user selects one letter at a time to fill in blanks on the current phrase. The user is allowed 5 incorrect guesses. Once this limit is reached, or once the phrase is solved, the game ends.",
+        about: "An interactive phrase-guessing game where the player attempts to solve the puzzle by guessing letters. Five wrong guesses and the game is over.",
         skills: [
             html5,
             css3,
@@ -91,6 +94,47 @@ const projects = [
     }
 ];
 
+
+// ===============================
+//       Project Cards
+// ===============================
+
+for(index = 0; index < projects.length; index++) {
+    const cards = projectSection.appendChild(projectCards);
+
+    const newCard = `
+        <a href="${projects[index].link}" target=”_blank”>
+            <div class="project-card">
+                <h2 class="subtitle is-light project-title has-text-centered project-title">
+                ${projects[index].title}
+                </h2>
+                <image class="project-img" src="${projects[index].img}" alt="project preview"></image>
+                <p class="is-light has-text-centered project-desc">
+                    ${projects[index].about}
+                </p>
+                <div class="project-skills">
+                    ${projects[index].skills}
+                </div>
+                <div class="project-links has-text-centered">
+                    <a class="source-code" href="${projects[index].files}" target=”_blank”>source code</a>
+                </div>   
+            </div>
+        </a>
+    `;
+
+    cards.innerHTML += newCard;
+}
+
+
+// ===============================
+//  Opens resume.pdf in a new tab
+// ===============================
+
+resume.addEventListener('click', () => {
+    window.open('../images/resume.pdf');
+});
+
+
 // ===============================
 //     Validate Email Address
 // ===============================
@@ -99,38 +143,6 @@ function emailIsValid(email) {
     return /\S+@\S+\.\S+/.test(email);
 }
 
-
-// ===============================
-//     Display Project Modal
-// ===============================
-
-function displayProject(index) {
-    showProject.innerHTML = `
-        <p class="subtitle is-light project-title has-text-centered">
-            ${projects[index].title}
-        </p>
-        <image class="project-img" src="${projects[index].img}" alt="project preview"></image>
-        <div class="buttons is-grouped project-btns">
-            <button class="button is-primary is-rounded is-outlined" id="left" >
-                <span class="back" id="back">&lt;</span>
-            </button>
-            <button class="button is-primary is-rounded is-outlined" id="right">
-                <span class="forward" id="forward">&gt;</span>
-            </button>
-        </div>
-        <p class="is-light has-text-centered project-info">
-            ${projects[index].about}
-        </p>
-        <div class="skills-list">
-            <p>skills used: </p>
-            ${projects[index].skills}
-        </div>
-        <div class="project-links has-text-centered">
-            <a href="${projects[index].link}" target=”_blank”>visit site</a>
-            <a href="${projects[index].files}" target=”_blank”>source code</a>
-        </div>          
-    `;
-}
 
 // ===============================
 //    Contact Form Validation
@@ -199,69 +211,70 @@ if (clearBtn) {
     });
 }
 
+
 // ===============================
-//       Site Navigation
+//       Navbar Burger Menu
 // ===============================
 
-nav.addEventListener('click', (event) => {
-    if (event.target.id !== '' && event.target.id !== 'resume') {
-        if (event.target.id === 'say-hello') {
-            window.location.href='contact.html';
-        } else if (event.target.id === 'about-me') {
-            window.location.href = 'about.html';
-        } else if (event.target.id === 'recent-projects') {
-            window.location.href = 'projects.html';
-        } else if (event.target.id === 'home') {
-            window.location.href = 'index.html';
-        }
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
+      });
+    }
+  
+  });
+
+
+// ===============================
+//       Back to Top Button
+// ===============================
+
+//Get the button:
+topButton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    topButton.style.display = "flex";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+// ===============================
+//      Navbar Item Clicks
+// ===============================
+
+navItem.addEventListener('click', (e) => {
+    if(e.target.classList.contains('navbar-item')) {
+        burgerMenu.classList.remove('is-active');
+        navMenu.classList.remove('is-active');
     }
 });
-
-// ===============================
-//     Display First Project
-// ===============================
-
-if (projectsH1) { // checks h1 element for match to projects page h1
-    index = 0; // if matched, set index to 0 and display the first project
-    displayProject(index);
-}
-
-// ===============================
-//       Project List Nav
-// ===============================
-
-if (showProject) {
-    showProject.addEventListener('click', (event) => {
-        if (event.target.id === 'left' || event.target.id === 'back') {
-            if (index !== 0) {
-                index--;
-                displayProject(index);
-            } else {
-                index = projects.length - 1;
-                displayProject(index);
-            }
-        } else if (event.target.id === 'right' || event.target.id === 'forward') {
-            if (index !== projects.length - 1) {
-                index++;
-                displayProject(index);
-            } else {
-                index = 0;
-                displayProject(index);
-            }
-        }
-    });
-}
-
-// ===============================
-//  Opens resume.pdf in a new tab
-// ===============================
-
-resume.addEventListener('click', () => {
-    window.open('../images/resume.pdf');
-});
-
-
-
-
-
-

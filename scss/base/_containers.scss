@@ -6,19 +6,22 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
 }
 
-h1 {
+.title {
     text-align: center;
     padding-bottom: 1.5rem;
-}
-
-.columns {
-    border-bottom: 3px solid $light;
 }
 
 .info {
@@ -26,28 +29,23 @@ h1 {
 }
 
 .section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    color: $dark;
+    min-height: 100vh;
+}
+
+#projects,
+#contact {
+    background: $dark;
+    color: $white;
 }
 
 #wrapper {
-    flex: 1;
-}
-
-.profile {
-    border-radius: 50%;
-    height: 9rem;
-    width: 9rem;
-    margin: 0 auto;
-    margin-top: 10vh;
-    transition: all 0.75s ease-in-out;
-    border: 3px solid $primary-color;
-
-    &:hover {
-        transform: scale(1.2) rotate(-20deg);
-    }
+    flex: 1 0 auto;
 }
 
 .hello {
@@ -58,45 +56,9 @@ h1 {
     line-height: 1.2rem;
 }
 
-.field {
-    width: 95%;
-    max-width: 700px;
-    margin: 0 auto;
-
-    & input, textarea {
-        border: 3px solid $light;
-        background: $dark;
-        border-radius: 5px;
-        padding: 0 2rem;
-        width: 100%;
-        transition: all 0.75s ease-in-out;
-    }
-
-    & input {
-        height: 4rem;
-
-        &:focus,
-        &:hover {
-            outline: none;
-            border: 3px solid $primary-color;
-        }
-    }
-
-    & textarea {
-        resize: none;
-        height: 8rem;
-        padding-top: 1.2rem;
-        padding-left: 1.8rem;
-
-        &:focus, &:hover {
-            outline: none;
-            border: 3px solid $primary-color;
-        }
-    }
-}
-
 .footer {
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     padding: 0;
 }
@@ -118,64 +80,10 @@ h1 {
 }
 
 .social svg {
-    transition: 0.25s ease-in-out;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
 
     &:hover {
-        border-radius: 50%;
-        border: 3px solid $primary-color;
+        background: $primary-color;
     }
-}
-
-.current-project {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2rem 0;
-    height: 100%;
-
-    & h1 {
-        margin: 0;
-    }
-}
-
-.project {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-}
-
-.title-btns {
-    display: flex;
-    justify-content: space-between;
-
-    align-items: center;
-}
-
-.skills-list {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    color: $dark;
-
-    & p {
-        padding-top: 0.6rem;
-        padding-right: 20px;
-        color: $light;
-        font-size: 1rem;
-
-        @include mq('sm-med') {
-            padding-top: 0.4rem;
-            font-size: 1.5rem;
-        }
-    }
-}
-
-.project-img {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
 }

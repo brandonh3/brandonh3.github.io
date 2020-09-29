@@ -16,20 +16,41 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     -webkit-text-fill-color: $light;
+    box-shadow: 0 0 0px 1000px $dark inset;
     -webkit-box-shadow: 0 0 0px 1000px $dark inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 
 .title {
-    font-size: 3rem;
+    font-family: $font-family-primary;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-.info {
-    font-size: 1.2rem;
-}
-
-.container p {
+.intro-text,
+.about-p {
     font-family: $font-family-secondary;
+    font-weight: lighter;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.about-p {
+    margin: 1rem auto;
+}
+
+#projects,
+#contact {
+    & .title {
+        color: $white;
+    }
+}
+
+#projects .title {
+    padding-top: 1rem;
 }
 
 input, textarea {
@@ -46,51 +67,6 @@ input, textarea {
     font-weight: 700;
 }
 
-#about-info {
-    margin-bottom: 10px;
-    padding: 20px;
-
-    & h1, p {
-        color: $light;
-    }
-
-    & p {
-        font-family: $font-family-secondary;
-        line-height: 2rem;
-    }
-}
-
-.project-info {
-    font-family: $font-family-secondary;
-    color: $light;
-    padding: 0 1.2rem;
-}
-
 .project-title {
-    display: flex;
-    justify-content: center;
-    line-height: 2.2rem;
-    font-family: $font-family-primary;
-    text-transform: lowercase;
-    color: $light;
-    font-size: 2rem;
-    padding-top: 1rem;
-}
-
-.project-links {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-
-    & a {
-        color: $primary-color;
-        font-size: 1.5rem;
-        padding: 0 10px;
-        padding-top: 10px;
-        transition: all 0.75s ease-in-out;
-
-        &:hover {
-            color: $light;
-        }
-    }
+    font-size: 1.5rem;
 }

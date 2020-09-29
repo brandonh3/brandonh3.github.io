@@ -2,10 +2,6 @@
 //       Button Styles
 // ===============================
 
-// .buttons {
-//     padding-top: 50px;
-// }
-
 .buttons button,
 .project-btns button {
     font-family: $font-family-primary;
@@ -16,9 +12,6 @@
 .nav {
     display: flex;
     flex-direction: column;
-    padding-top: 0;
-    padding-bottom: 2rem;
-    margin-top: 2rem;
 
     & button {
         font-size: 1.4rem;
@@ -27,6 +20,11 @@
     @include mq('med') {
         flex-direction: row;
     }
+}
+
+.navbar-burger {
+    color: $primary-color;
+    transform: scale(1.5);
 }
 
 .submit {
@@ -57,17 +55,25 @@
     }
 }
 
-#left {
-    float: left;
-}
-
-#right {
-    float: right;
-}
-
 .skill-icon {
     width: 2.5rem;
     height: 2.5rem;
 }
 
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 99;
+    border-radius: 50%;
+    border: 3px solid $primary-color;
+    box-shadow: 2px 3px 12px $dark;
+    height: 50px;
+    width: 50px;
+
+    & span {
+        font-weight: bolder;
+    }
+}
 
