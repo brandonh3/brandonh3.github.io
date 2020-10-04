@@ -70,7 +70,7 @@
 
 .submit {
   padding-top: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
 }
 
 .submit button {
@@ -172,6 +172,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin-top: 1.5rem;
 }
 
 #hello-form .column {
@@ -365,6 +366,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+  padding-bottom: 0.75rem;
 }
 
 .social {
@@ -765,6 +767,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .intro-text,
