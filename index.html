@@ -82,44 +82,46 @@
         </p>
     </div>
 
-    <div class="section" id="contact">
-        <h1 class="title chat">
-            let's chat.
-        </h1>
-        <div class="columns" id="hello-form">
-            <div class="column">
-                <div class="field">
-                    <div class="control">
-                        <input class="form-field" type="text" id="name" placeholder="your name">
-                    </div>
-                </div>
+    <form method="post" action="contact-form-process.php">
+      <div class="section" id="contact">
+          <h1 class="title chat">
+              let's chat.
+          </h1>
+          <div class="columns" id="hello-form">
+              <div class="column">
+                  <div class="field">
+                      <div class="control">
+                          <input class="form-field" type="text" id="name" placeholder="your name">
+                      </div>
+                  </div>
 
-                <div class="field">
-                    <div class="control">
-                        <input class="form-field" type="email" id="email" placeholder="your email">
-                    </div>
-                </div>
+                  <div class="field">
+                      <div class="control">
+                          <input class="form-field" type="email" id="email" placeholder="your email">
+                      </div>
+                  </div>
 
-                <div class="field">
-                    <div class="control">
-                        <textarea class="form-field" id="message"
-                            placeholder="how can I help?"></textarea>
-                    </div>
-                </div>
+                  <div class="field">
+                      <div class="control">
+                          <textarea class="form-field" id="message"
+                              placeholder="how can I help?"></textarea>
+                      </div>
+                  </div>
 
-                <div class="field buttons is-grouped submit">
-                    <div class="control">
-                        <button type="submit" class="button is-primary is-rounded is-outlined"
-                            id="submit-btn">submit</button>
-                    </div>
-                    <div class="control">
-                        <button class="button is-dark is-rounded is-inverted is-outlined"
-                            id="clear-btn">clear</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  <div class="field buttons is-grouped submit">
+                      <div class="control">
+                          <button type="submit" class="button is-primary is-rounded is-outlined"
+                              id="submit-btn">submit</button>
+                      </div>
+                      <div class="control">
+                          <button class="button is-dark is-rounded is-inverted is-outlined"
+                              id="clear-btn">clear</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </form>
     <button id="topBtn" class="button is-rounded is-primary" onclick="topFunction()"><span class="material-icons">keyboard_arrow_up</span></button>
 
 </main>
