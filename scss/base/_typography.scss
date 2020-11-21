@@ -30,6 +30,10 @@ select:-webkit-autofill:focus {
     margin-top: 6rem;
 }
 
+#intro .title {
+    margin-top: 0;
+}
+
 .intro-text,
 .about-p {
     font-family: $font-family-secondary;
