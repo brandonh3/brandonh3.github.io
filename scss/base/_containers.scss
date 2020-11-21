@@ -88,3 +88,15 @@ body {
         transform: scale(1.6);
     }
 }
+
+.chat-section,
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact {
+    padding-bottom: 1.5rem;
+}
