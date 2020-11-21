@@ -134,8 +134,8 @@
 #topBtn {
   display: none;
   position: fixed;
-  bottom: 4rem;
-  right: 1.5rem;
+  bottom: 2.75rem;
+  right: 1.25rem;
   z-index: 99;
   border-radius: 50%;
   border: 3px solid #ff6347;
@@ -465,7 +465,7 @@ body {
 }
 
 #contact {
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
