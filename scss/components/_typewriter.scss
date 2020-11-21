@@ -1,0 +1,10 @@
+// ===============================
+//       Typewriter Styles
+// ===============================
+
+#typewriter {
+    display: flex;
+    flex-direction: row;
+    font-family: $font-family-secondary;
+    font-size: 1.75rem;
+}

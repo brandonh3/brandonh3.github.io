@@ -278,3 +278,53 @@ navItem.addEventListener('click', (e) => {
         navMenu.classList.remove('is-active');
     }
 });
+
+
+// ===============================
+//      Typewriter Effect
+// ===============================
+
+new TypeIt("#typewriter", {
+    startDelay: 2000,
+    speed: 120,
+    lifeLike: true,
+    waitUntilVisible: true,
+    loop: true
+  })
+    .type("Front-end Web Developer.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("HTML / CSS.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("JavaScript Ninja.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Fueled by coffee.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Design minimalism.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Smooth, elegant animations.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Based in Atlanta.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Currently accepting work.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .type("Let's build something awesome.")
+    .pause(2500)
+    .delete()
+    .pause(1500)
+    .go();
