@@ -54,18 +54,17 @@ select:-webkit-autofill:focus {
     padding-top: 1rem;
 }
 
-input, textarea {
-    font-family: $font-family-secondary;
-    color: $light;
-    font-size: 1.2rem;
+#contact a {
+    transition: all 0.75s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+    }
 }
 
-::placeholder,
-.message::placeholder
- {
-    font-family: $font-family-secondary;
-    font-size: 1.2rem;
-    font-weight: 700;
+#contact h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-title {

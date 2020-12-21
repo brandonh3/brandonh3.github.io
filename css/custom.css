@@ -108,77 +108,20 @@
 #topBtn {
   display: none;
   position: fixed;
-  bottom: 1rem;
-  right: 2rem;
+  bottom: 1.5rem;
+  right: 0.75rem;
   z-index: 99;
   border-radius: 50%;
   border: 3px solid #00D1B2;
   -webkit-box-shadow: 2px 3px 12px #363636;
           box-shadow: 2px 3px 12px #363636;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 
 #topBtn span {
+  font-size: 2rem;
   font-weight: bolder;
-}
-
-.field {
-  width: 100%;
-  max-width: 700px;
-}
-
-.field input, .field textarea {
-  border: 3px solid #fff;
-  background: #363636;
-  border-radius: 5px;
-  padding: 0 2rem;
-  width: 100%;
-  -webkit-transition: all 0.75s ease-in-out;
-  transition: all 0.75s ease-in-out;
-}
-
-.field input {
-  height: 4rem;
-  width: 100%;
-}
-
-.field input:focus, .field input:hover {
-  outline: none;
-  border: 3px solid #00D1B2;
-}
-
-.field textarea {
-  resize: none;
-  height: 8rem;
-  padding-top: 1.2rem;
-  padding-left: 1.8rem;
-}
-
-.field textarea:focus, .field textarea:hover {
-  outline: none;
-  border: 3px solid #00D1B2;
-}
-
-#hello-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin-top: 1.5rem;
-}
-
-#hello-form .column {
-  width: 100%;
-  max-width: 700px;
-  padding: 0;
 }
 
 .project-cards {
@@ -333,6 +276,8 @@ body {
   background: #fff;
   color: #363636;
   min-height: 100vh;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #projects,
@@ -793,38 +738,18 @@ select:-webkit-autofill:focus {
   padding-top: 1rem;
 }
 
-input, textarea {
-  font-family: "Open Sans", sans-serif;
-  color: #F5F5F5;
-  font-size: 1.2rem;
+#contact a {
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
-::-webkit-input-placeholder,
-.message::-webkit-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+#contact a:hover {
+  color: #00D1B2;
 }
 
-:-ms-input-placeholder,
-.message:-ms-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-::-ms-input-placeholder,
-.message::-ms-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-::placeholder,
-.message::placeholder {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+#contact h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-title {
