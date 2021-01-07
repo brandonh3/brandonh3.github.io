@@ -1,0 +1,62 @@
+// ====================
+//    Menu Styles
+// ====================
+
+.title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: -1rem;
+    border-top: 1px solid $light-grey;
+    padding-top: 4rem;
+}
+
+.drinks .title:first-of-type {
+    border-top: none;
+}
+
+.subtitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 0.3rem;
+    margin-bottom: -1rem;
+}
+
+.reds {
+    margin-top: 3rem;
+    border-left: 4px solid maroon;
+}
+
+.whites {
+    border-left: 4px solid $light-grey;
+}
+
+.menu-item {
+    list-style: none;
+    margin-left: -2rem;
+    padding: 1rem 0;
+    width: 100%;
+
+    @include mq('lg') {
+        width: 50%;
+    }
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+
+    @include mq('lg') {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.menu-item-name {
+    font-size: 1.2rem;
+}
+
+.menu-item-name, .menu-item-price {
+    font-weight: bold;
+}

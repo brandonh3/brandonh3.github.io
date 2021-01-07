@@ -36,6 +36,7 @@
 }
 
 .project-title {
+    text-transform: uppercase;
     padding: 0.75rem;
     color: $dark;
 }
@@ -43,13 +44,14 @@
 .project-img {
     width: 95%;
     border-radius: 5px;
-    box-shadow: 2px 3px 12px $dark;
+    box-shadow: 1px 2px 8px $dark;
 }
 
 .project-desc {
-    font-family: $font-family-secondary;
+    font-family: $font-family-primary;
     color: $dark;
-    font-weight: lighter;
+    font-weight: 400;
+    font-size: 1.2rem;
     padding: 0.75rem;
 }
 
@@ -70,6 +72,9 @@
         border-radius: 1rem;
         padding: 0.4rem;
         color: $primary-color;
+        font-weight: 600;
+        font-size: 1.3rem;
+        text-transform: uppercase;
         transition: all 0.5s ease-in-out;
         margin: 0.5rem;
         position: absolute;

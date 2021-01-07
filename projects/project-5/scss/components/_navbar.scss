@@ -1,0 +1,50 @@
+// ====================
+//    Navbar Styles
+// ====================
+
+nav {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    background-color: $dark-grey;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    margin: 0;
+    width: 100%;
+
+    @include mq('sm-med') {
+        justify-content: flex-end;
+    }
+}
+
+.nav-item {
+    list-style: none;
+    padding: 0 2rem;
+
+
+    & a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8rem;
+        transition: all 0.2s ease-in-out;
+
+        @include mq('med') {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            border-bottom: 5px solid $light-grey;
+        }
+    }
+}

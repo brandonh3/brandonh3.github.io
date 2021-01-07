@@ -1,0 +1,76 @@
+// ====================
+//   Container Styles
+// ====================
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.banner {
+    background-image: url(../../img/coffee-shop.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+    padding: 2rem;
+
+    @include mq('lg') {
+        height: 60vh;
+    }
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    background-color: $white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 1200px;
+    background-color: $dark-grey;
+    padding-top: 2rem;
+
+    & .footer-title {
+        border-top: none;
+    }
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sections {
+    @include mq('med') {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+

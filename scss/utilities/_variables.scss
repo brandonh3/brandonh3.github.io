@@ -2,13 +2,14 @@
 //           Variables
 // ===============================
 
-// Font Families
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Oswald:wght@300;400;700&display=swap');
 
-$font-family-primary: 'Anton', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
+$font-family-primary: 'Open Sans', sans-serif;
+$font-family-secondary: 'Oswald', sans-serif;
 
-// Colors
 
+// COLORS
 $white: #fff;
 $dark: #363636;
 $light: #F5F5F5;
@@ -16,8 +17,8 @@ $primary-color: #00D1B2;
 $success: #419a53;
 $error: #b22734;
 
-// Layout
 
+// LAYOUT
 $max-width: 1200px;
 
 $breakpoints: ('sm': 320px,

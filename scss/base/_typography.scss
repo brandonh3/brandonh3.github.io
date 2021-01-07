@@ -4,6 +4,7 @@
 
 body {
     font-family: $font-family-primary;
+    font-weight: 300;
 }
 
 input:-webkit-autofill,
@@ -23,6 +24,7 @@ select:-webkit-autofill:focus {
 
 .title {
     font-family: $font-family-primary;
+    text-transform: uppercase;
     text-align: center;
     font-size: 2.5rem;
     margin: 2rem;
@@ -32,8 +34,9 @@ select:-webkit-autofill:focus {
 
 .intro-text,
 .about-p {
-    font-family: $font-family-secondary;
-    font-weight: lighter;
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 1.3rem;
     max-width: 800px;
     text-align: center;
     padding: 0 2rem;

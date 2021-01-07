@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Oswald:wght@300;400;700&display=swap");
 .navbar {
   padding: 1rem 2rem;
 }
@@ -33,7 +34,7 @@
 
 .buttons button,
 .project-btns button {
-  font-family: "Anton", sans-serif;
+  font-family: "Open Sans", sans-serif;
   border: 3px solid #00D1B2;
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
@@ -171,6 +172,7 @@
 }
 
 .project-title {
+  text-transform: uppercase;
   padding: 0.75rem;
   color: #363636;
 }
@@ -178,14 +180,15 @@
 .project-img {
   width: 95%;
   border-radius: 5px;
-  -webkit-box-shadow: 2px 3px 12px #363636;
-          box-shadow: 2px 3px 12px #363636;
+  -webkit-box-shadow: 1px 2px 8px #363636;
+          box-shadow: 1px 2px 8px #363636;
 }
 
 .project-desc {
   font-family: "Open Sans", sans-serif;
   color: #363636;
-  font-weight: lighter;
+  font-weight: 400;
+  font-size: 1.2rem;
   padding: 0.75rem;
 }
 
@@ -215,6 +218,9 @@
   border-radius: 1rem;
   padding: 0.4rem;
   color: #00D1B2;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   margin: 0.5rem;
@@ -688,7 +694,8 @@ template {
 }
 
 body {
-  font-family: "Anton", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
 input:-webkit-autofill,
@@ -708,7 +715,8 @@ select:-webkit-autofill:focus {
 }
 
 .title {
-  font-family: "Anton", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
   text-align: center;
   font-size: 2.5rem;
   margin: 2rem;
@@ -719,7 +727,8 @@ select:-webkit-autofill:focus {
 .intro-text,
 .about-p {
   font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
+  font-size: 1.3rem;
   max-width: 800px;
   text-align: center;
   padding: 0 2rem;
