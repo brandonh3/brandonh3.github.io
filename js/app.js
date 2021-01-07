@@ -81,16 +81,17 @@ const projects = [
         files: "https://github.com/brandonh3/techdegree-project-3"
     },
     {
-        title: "Wheel of Success Game",
+        title: "Beans & Brews",
         img: "./images/project-5.png",
-        about: "An interactive phrase-guessing game where the player attempts to solve the puzzle by guessing letters. Five wrong guesses and the game is over.",
+        about: "A local coffee shop in midtown Atlanta featuring coffee, beer, wine and delicious food.",
         skills: [
             html5,
             css3,
-            javascript
+            javascript,
+            sass
         ],
         link: "../projects/project-5/index.html",
-        files: "https://github.com/brandonh3/techdegree-project-6"
+        files: "https://github.com/brandonh3/beans-and-brews"
     }
 ];
 
