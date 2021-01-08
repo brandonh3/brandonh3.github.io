@@ -3,7 +3,6 @@ const menuSections = [
 ]
 
 // GENERATE MENU ITEMS
-let menuURL = 'https://github.com/brandonh3/beans-and-brews/blob/master/json/menu.json'
 const menu = new XMLHttpRequest()
 menu.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -28,12 +27,11 @@ menu.onreadystatechange = function() {
        }
     }
 }
-menu.open('GET', menuURL, true)
+menu.open('GET', '../json/menu.json', true)
 menu.send()
 
 
 // GENERATE BUSINESS INFO
-let businessURL = 'https://github.com/brandonh3/beans-and-brews/blob/master/json/business.json'
 const business = new XMLHttpRequest()
 business.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -61,6 +59,6 @@ business.onreadystatechange = function() {
         `
     }
 };
-business.open('GET', businessURL, true)
+business.open('GET', '../json/business.json', true)
 business.send()
 
