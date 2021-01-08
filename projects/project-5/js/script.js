@@ -3,7 +3,7 @@ const menuSections = [
 ]
 
 // GENERATE MENU ITEMS
-let menuURL = 'https://github.com/brandonh3/brandonh3.github.io/blob/master/projects/project-5/json/menu.json'
+let menuURL = 'https://brandonh3.github.io/data/menu.json'
 const menu = new XMLHttpRequest()
 menu.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -33,7 +33,7 @@ menu.send()
 
 
 // GENERATE BUSINESS INFO
-let businessURL = 'https://github.com/brandonh3/brandonh3.github.io/blob/master/projects/project-5/json/business.json'
+let businessURL = 'https://brandonh3.github.io/data/business.json'
 const business = new XMLHttpRequest()
 business.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
