@@ -27,7 +27,7 @@ menu.onreadystatechange = function() {
        }
     }
 }
-menu.open("GET", "../json/menu.json", true)
+menu.open('GET', '../json/menu.json', true)
 menu.send()
 
 
@@ -59,6 +59,6 @@ business.onreadystatechange = function() {
         `
     }
 };
-business.open("GET", "../json/business.json", true)
+business.open('GET', '../json/business.json', true)
 business.send()
 
