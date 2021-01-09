@@ -37,7 +37,7 @@
     padding: 1rem 0;
     width: 100%;
 
-    @include mq('lg') {
+    @include mq('med') {
         width: 50%;
     }
 }
@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq('lg') {
+    @include mq('med') {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;

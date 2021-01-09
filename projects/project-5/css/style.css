@@ -370,11 +370,43 @@ body {
 
 section {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
+  padding: 0;
 }
 
 .banner {
-  background-image: url(../../img/coffee-shop.jpeg);
+  position: relative;
+  height: calc(100vh - 70px);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1447347974530-d7c185559683?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3074&q=80");
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 0%;
+}
+
+.banner-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1525193612562-0ec53b0e5d7c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -385,16 +417,16 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   margin-top: 80px;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 @media (min-width: 1024px) {
   .banner {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -406,8 +438,14 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 2rem;
+  padding: 0 1rem;
   background-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .menu-section {
+    padding: 0 2rem;
+  }
 }
 
 footer {
@@ -418,9 +456,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 2rem;
+  padding: 0 1rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   background-color: #272727;
   padding-top: 2rem;
 }
@@ -450,32 +488,38 @@ footer .footer-title {
   }
 }
 
-nav {
+.navbar {
   position: fixed;
   overflow: hidden;
   width: 100%;
   top: 0;
   background-color: #272727;
-  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 1200px;
+  max-width: 1500px;
+  z-index: 99;
+  padding: 0 3rem;
 }
 
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   width: 100%;
+  height: 70px;
+  width: 100%;
+  padding: 0;
 }
 
 @media (min-width: 480px) {
@@ -488,7 +532,7 @@ nav {
 
 .nav-item {
   list-style: none;
-  padding: 0 2rem;
+  padding: 1rem;
 }
 
 .nav-item a {
@@ -547,7 +591,7 @@ nav {
   width: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .menu-item {
     width: 50%;
   }
@@ -563,7 +607,7 @@ nav {
           flex-direction: column;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .menu-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -596,14 +640,14 @@ body {
 
 .banner .banner-title {
   font-family: "Dancing Script", cursive;
-  font-size: 6rem;
+  font-size: 4rem;
   margin-top: 0;
   text-shadow: 2px 2px #272727;
 }
 
 @media (min-width: 1024px) {
   .banner .banner-title {
-    font-size: 10rem;
+    font-size: 6rem;
   }
 }
 
@@ -614,13 +658,11 @@ body {
 
 @media (min-width: 1024px) {
   .banner .tagline {
-    font-size: 1.8rem;
     padding-top: 0;
     margin-top: -1rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    max-width: 80%;
   }
 }
 
@@ -645,6 +687,7 @@ body {
   text-align: center;
   padding-top: 2rem;
   line-height: 15px;
+  font-size: 0.9rem;
 }
 
 footer p {
