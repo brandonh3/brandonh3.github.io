@@ -20,12 +20,11 @@
     align-items: center;
     margin: 0;
     width: 100%;
-    max-width: $max-width;
     height: 100px;
     width: 100%;
     padding: 0;
 
-    @include mq('sm-med') {
+    @include mq('med') {
         justify-content: flex-end;
     }
 }
