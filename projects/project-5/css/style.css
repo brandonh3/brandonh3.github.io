@@ -372,6 +372,7 @@ section {
   width: 100%;
   max-width: 1500px;
   padding-top: 2rem;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .banner {
@@ -479,8 +480,9 @@ footer .footer-title {
   }
 }
 
-#drinks, #food, #beans {
-  scroll-margin: 100px;
+#food, #drinks, #beans {
+  padding-top: 70px;
+  margin-top: -50px;
 }
 
 .navbar {
