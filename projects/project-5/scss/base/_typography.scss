@@ -15,9 +15,11 @@ body {
         font-size: 4rem;
         margin-top: 0;
         text-shadow: 2px 2px $dark-grey;
-
+        @include mq('sm-med') {
+            font-size: 8rem;
+        }
         @include mq('lg') {
-            font-size: 6rem;
+            font-size: 10rem;
         }
     }
 

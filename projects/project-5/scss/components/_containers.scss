@@ -26,7 +26,6 @@ section {
 
 .banner {
     position: relative;
-    height: calc(100vh - 70px);
 
     &::before {
         content: "";
@@ -54,14 +53,14 @@ section {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 500px;
     width: 100%;
     margin-top: 80px;
     text-align: center;
     padding: 2rem 1rem;
 
-    @include mq('lg') {
-        height: 70vh;
+    @include mq('sm-med') {
+        height: 700px;
     }
 }
 
