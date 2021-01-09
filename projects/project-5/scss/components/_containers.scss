@@ -21,11 +21,22 @@ body {
 section {
     width: 100%;
     max-width: $max-width;
-    padding: 0;
+    padding-top: 2rem;
 }
 
 .banner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    padding: 2rem 1rem;
+
+    @include mq('sm-med') {
+        height: 700px;
+    }
 
     &::before {
         content: "";
@@ -43,20 +54,6 @@ section {
         position: relative;
         display: flex;
         flex-direction: column;
-    }
-}
-
-.banner {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 100%;
-    margin-top: 100px;
-    text-align: center;
-    padding: 2rem 1rem;
-
-    @include mq('sm-med') {
-        height: 700px;
     }
 }
 
@@ -96,3 +93,6 @@ footer {
     }
 }
 
+#drinks, #food, #beans {
+    scroll-margin: 100px;
+}

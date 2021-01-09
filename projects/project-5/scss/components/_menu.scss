@@ -6,9 +6,9 @@
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2rem;
-    margin-bottom: -1rem;
+    margin: 0;
     border-top: 1px solid $light-grey;
-    padding-top: 4rem;
+    padding-top: 3rem;
 }
 
 .drinks .title:first-of-type {
@@ -19,7 +19,7 @@
     font-weight: bold;
     text-transform: uppercase;
     padding-left: 0.3rem;
-    margin-bottom: -1rem;
+    margin: 0;
 }
 
 .reds {
@@ -28,13 +28,14 @@
 }
 
 .whites {
+    margin-top: 2rem;
     border-left: 4px solid $light-grey;
 }
 
 .menu-item {
     list-style: none;
+    margin-bottom: 1rem;
     margin-left: -2rem;
-    padding: 1rem 0;
     width: 100%;
 
     @include mq('med') {
@@ -61,6 +62,6 @@
     font-weight: bold;
 }
 
-.menu-section {
-    padding-top: 4rem;
+section ul {
+    padding-bottom: 10px
 }

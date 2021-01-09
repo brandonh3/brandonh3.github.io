@@ -371,11 +371,29 @@ body {
 section {
   width: 100%;
   max-width: 1500px;
-  padding: 0;
+  padding-top: 2rem;
 }
 
 .banner {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 500px;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 480px) {
+  .banner {
+    height: 700px;
+  }
 }
 
 .banner::before {
@@ -402,27 +420,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 500px;
-  width: 100%;
-  margin-top: 100px;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-@media (min-width: 480px) {
-  .banner {
-    height: 700px;
-  }
 }
 
 .menu-section {
@@ -480,6 +477,10 @@ footer .footer-title {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+}
+
+#drinks, #food, #beans {
+  scroll-margin: 100px;
 }
 
 .navbar {
@@ -552,9 +553,9 @@ footer .footer-title {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2rem;
-  margin-bottom: -1rem;
+  margin: 0;
   border-top: 1px solid #dedede;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .drinks .title:first-of-type {
@@ -565,7 +566,7 @@ footer .footer-title {
   font-weight: bold;
   text-transform: uppercase;
   padding-left: 0.3rem;
-  margin-bottom: -1rem;
+  margin: 0;
 }
 
 .reds {
@@ -574,13 +575,14 @@ footer .footer-title {
 }
 
 .whites {
+  margin-top: 2rem;
   border-left: 4px solid #dedede;
 }
 
 .menu-item {
   list-style: none;
+  margin-bottom: 1rem;
   margin-left: -2rem;
-  padding: 1rem 0;
   width: 100%;
 }
 
@@ -622,8 +624,8 @@ footer .footer-title {
   font-weight: bold;
 }
 
-.menu-section {
-  padding-top: 4rem;
+section ul {
+  padding-bottom: 10px;
 }
 
 body {
