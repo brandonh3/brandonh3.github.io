@@ -92,6 +92,18 @@ const projects = [
         ],
         link: "../projects/project-5/index.html",
         files: "https://github.com/brandonh3/beans-and-brews"
+    },
+    {
+        title: "B&M Warehouse Services",
+        img: "./images/project-6.png",
+        about: "Website for B&M Warehouse Services.",
+        skills: [
+            html5,
+            css3,
+            javascript
+        ],
+        link: "../projects/project-6/index.html",
+        files: "https://github.com/brandonh3/bmwarehouseservices"
     }
 ];
 
