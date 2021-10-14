@@ -1,0 +1,24 @@
+// ====================
+//      Variables
+// ====================
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mulish:wght@300;400;700;900&display=swap');
+
+// FONT FAMILIES
+$font-family-primary: 'Mulish', sans-serif;
+$font-family-secondary: 'Dancing Script', cursive;
+
+// COLORS
+$white: #fff;
+$black: #000;
+$light-grey: #dedede;
+$dark-grey: #272727;
+
+// BREAKPOINTS
+$max-width: 1500px;
+
+$breakpoints: ('sm': 320px,
+    'sm-med': 480px,
+    'med': 768px,
+    'lg': 1024px,
+    'xl': 1440px);
