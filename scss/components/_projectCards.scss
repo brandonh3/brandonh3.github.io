@@ -1,0 +1,89 @@
+// ===============================
+//      Project Card Styles
+// ===============================
+
+.project-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: $max-width;
+}
+
+.project-card {
+    width: 100%;
+    background: $white;
+    border-radius: 0.4rem;
+    margin: 2rem 1rem;
+    position: relative;
+    color: $dark;
+    text-align: center;
+    border: 5px solid $white;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        border: 5px solid $primary-color;
+        cursor: pointer;
+    }
+
+    @include mq('sm-med') {
+        width: 90%;
+    }
+
+    @include mq('med') {
+        width: 45%;
+    }
+}
+
+.project-title {
+    text-transform: uppercase;
+    padding: 0.75rem;
+    color: $dark;
+}
+
+.project-img {
+    width: 95%;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px $dark;
+}
+
+.project-desc {
+    font-family: $font-family-primary;
+    color: $dark;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+}
+
+.project-skills {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    color: $white;
+    margin-bottom: 5rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+
+    & .source-code {
+        border: 3px solid $primary-color;
+        border-radius: 1rem;
+        padding: 0.4rem;
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        transition: all 0.5s ease-in-out;
+        margin: 0.5rem;
+        position: absolute;
+        bottom: 0;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+}
+

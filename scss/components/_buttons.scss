@@ -1,0 +1,80 @@
+// ===============================
+//       Button Styles
+// ===============================
+
+.buttons button,
+.project-btns button {
+    font-family: $font-family-primary;
+    border: 3px solid $primary-color;
+    transition: all 0.75s ease-in-out;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+
+    & button {
+        font-size: 1.4rem;
+    }
+
+    @include mq('med') {
+        flex-direction: row;
+    }
+}
+
+.navbar-burger {
+    color: $primary-color;
+    transform: scale(1.5);
+}
+
+.submit {
+    padding-top: 0;
+    padding-bottom: 6rem;
+
+    & button {
+        font-size: 1.4rem;
+    }
+}
+
+.field.is-grouped {
+    display: flex;
+    justify-content: center;
+}
+
+.project-btns {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+
+    & button {
+        font-size: 1.4rem;
+    }
+
+    & span {
+        margin: auto 0;
+    }
+}
+
+.skill-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 0.75rem;
+    z-index: 99;
+    border-radius: 50%;
+    border: 3px solid $primary-color;
+    box-shadow: 2px 3px 12px $dark;
+    height: 60px;
+    width: 60px;
+
+    & span {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+}
+
