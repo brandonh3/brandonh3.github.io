@@ -218,6 +218,12 @@ and (max-width: 768px) {
     .profile {
         width: 8rem;
         height: 8rem;
+        border: none;
+    }
+
+    .profile img {
+        width: 8rem;
+        height: 8rem;
     }
 }
 
