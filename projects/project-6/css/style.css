@@ -128,8 +128,8 @@
 .profile {
     display: flex;
     margin: 0 auto;
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     border: 3px solid #113565;
     border-radius: 50%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
@@ -216,8 +216,8 @@ and (max-width: 768px) {
     }
 
     .profile {
-        height: 7rem;
-        width: 7rem;
+        width: 8rem;
+        height: 8rem;
     }
 }
 
